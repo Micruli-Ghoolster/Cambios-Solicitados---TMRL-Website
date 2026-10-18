@@ -39,6 +39,15 @@
             color: #666;
         }
         
+        .client-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #444;
+        }
+        
         section {
             margin-bottom: 40px;
         }
@@ -52,13 +61,43 @@
             padding-left: 15px;
         }
         
+        h3 {
+            color: #555;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            padding-left: 10px;
+        }
+        
+        .section-cliente {
+            background-color: #f8f9ff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .section-auditoria {
+            background-color: #fafafa;
+            border-radius: 8px;
+            padding: 30px;
+        }
+        
+        .priority-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
         .priority-high {
-            background-color: #fff3f3;
-            border-left: 5px solid #ff4444 !important;
+            background-color: #ff4444;
+            color: white;
         }
         
         .priority-normal {
-            background-color: #f8f9fa;
+            background-color: #6d4aff;
+            color: white;
         }
         
         table {
@@ -79,28 +118,57 @@
         td {
             padding: 12px 15px;
             border-bottom: 1px solid #ddd;
+            vertical-align: top;
         }
         
         tr:nth-child(even) {
             background-color: #fafafa;
         }
         
-        .badge {
+        .task-number {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
+            width: 28px;
+            height: 28px;
+            background-color: #6d4aff;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 0.9em;
+            line-height: 28px;
+            margin-right: 8px;
             font-weight: 600;
         }
         
-        .badge-high {
-            background-color: #ff4444;
-            color: white;
+        .finding-box {
+            background-color: #fff3f3;
+            border-left: 5px solid #ff4444;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 0.95em;
         }
         
-        .badge-normal {
-            background-color: #6d4aff;
-            color: white;
+        .positive-box {
+            background-color: #f0f8f0;
+            border-left: 5px solid #4caf50;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        
+        .order-box {
+            background-color: #f8f9fa;
+            border: 2px solid #6d4aff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .order-box ol {
+            margin-left: 20px;
+        }
+        
+        .order-box li {
+            margin-bottom: 8px;
         }
         
         .footer-info {
@@ -132,279 +200,587 @@
     
     <header>
         <h1>Cambios Solicitados - TMRL Website</h1>
-        <p class="subtitle">Resumen de ajustes para www.tmrl.org | Cliente: Carlos Traginer</p>
-        <p><strong>Fecha de solicitud:</strong> Octubre 2026 | <strong>Plazo deseado:</strong> Semana del 21 al 27 de septiembre (reprogramado)</p>
+        <p class="subtitle">Documentación completa: Peticiones del cliente + Auditoría técnica</p>
+        <div class="client-info">
+            <span><strong>Cliente:</strong> Carlos Traginer (TMRL)</span>
+            <span><strong>Plazo deseado:</strong> Semana del 19 al 25 de octube 2026</span>
+        </div>
+        <div class="client-info">
+            <span><strong>Contacto:</strong> hello@tmrl.org</span>
+            <span><strong>Web actual:</strong> www.tmrl.org</span>
+        </div>
     </header>
     
-    <!-- Diseño General -->
-    <section>
-        <h2>1. Diseño General</h2>
+    <!-- ============================================ -->
+    <!-- SECCIÓN 1: PETICIONES DEL CLIENTE -->
+    <!-- ============================================ -->
+    
+    <div class="section-cliente">
+        <h2>📋 Parte 1: Cambios Solicitados por el Cliente</h2>
+        <p style="margin-bottom: 25px; color: #666;">Extraídos directamente de los emails de Carlos Traginer</p>
+        
+        <!-- Diseño General -->
+        <h3>1. Diseño General</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Cambio</th>
+                    <th width="35%">Cambio</th>
                     <th>Detalle</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Eliminar efecto de fondo/slide</td>
-                    <td>Quitar el slider utilizado como fondo de la portada</td>
+                    <td><strong>Simplificar fondo de portada</strong></td>
+                    <td>Eliminar tanto el slider como el patrón de puntos → Dejar fondo blanco limpio</td>
                 </tr>
                 <tr>
-                    <td>Eliminar fondo de puntos</td>
-                    <td>Dejar únicamente fondo blanco limpio</td>
-                </tr>
-                <tr>
-                    <td>Cambiar tipografía principal</td>
+                    <td><strong>Cambiar tipografía principal</strong></td>
                     <td>Usar IBM Plex o Roboto para texto general</td>
                 </tr>
                 <tr>
-                    <td>Mantener Helvetica Neue</td>
+                    <td><strong>Mantener Helvetica Neue</strong></td>
                     <td>Para ilustraciones existentes y logotipo</td>
                 </tr>
                 <tr>
-                    <td>Simplificar fotos</td>
+                    <td><strong>Simplificar fotos</strong></td>
                     <td>Eliminar algunas fotografías en ciertas páginas</td>
                 </tr>
                 <tr>
-                    <td>Corregir fallos de maquetación</td>
+                    <td><strong>Corregir fallos de maquetación</strong></td>
                     <td>Traducciones, desplazamientos, ajustes responsive</td>
                 </tr>
             </tbody>
         </table>
-    </section>
-    
-    <!-- Contenido Multimedia -->
-    <section class="priority-normal">
-        <h2>2. Contenido Multimedia</h2>
+        
+        <!-- Contenido Multimedia -->
+        <h3>2. Contenido Multimedia</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Cambio</th>
+                    <th width="35%">Cambio</th>
                     <th>Detalle</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Añadir/actualizar fotos</td>
-                    <td>Galería de proyectos (Hypate, Ingravitas)</td>
+                    <td><strong>Añadir/actualizar fotos en galerías</strong></td>
+                    <td>Proyectos Hypate e Ingravitas</td>
                 </tr>
                 <tr>
-                    <td>2 nuevos proyectos</td>
-                    <td><strong>Symbiotika</strong> y <strong>Haptikon</strong> (crear página completa + textos + imágenes)</td>
+                    <td><strong>2 nuevos proyectos completos</strong></td>
+                    <td><strong>Symbiotika</strong> y <strong>Haptikon</strong> (crear página + textos + imágenes)</td>
                 </tr>
                 <tr>
-                    <td>Video presentación</td>
+                    <td><strong>Video presentación</strong></td>
                     <td>Insertar video Xia Vélora debajo del párrafo de Bienvenida</td>
                 </tr>
                 <tr>
-                    <td>Sustituir carátulas estáticas</td>
-                    <td>Reemplazar por animaciones (se proporcionarán)</td>
+                    <td><strong>Sustituir carátulas estáticas</strong></td>
+                    <td>Reemplazar por animaciones (se proporcionarán archivos)</td>
                 </tr>
                 <tr>
-                    <td>Logotipos de medios</td>
+                    <td><strong>Logotipos de medios</strong></td>
                     <td>National Geographic, OKDIARIO, La Cabaña del Luthier (con enlaces)</td>
                 </tr>
             </tbody>
         </table>
-    </section>
-    
-    <!-- Estructura Web -->
-    <section class="priority-normal">
-        <h2>3. Estructura Web</h2>
+        
+        <!-- Estructura Web -->
+        <h3>3. Estructura Web</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Cambio</th>
+                    <th width="35%">Cambio</th>
                     <th>Detalle</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Actualizar menú principal</td>
+                    <td><strong>Actualizar menú principal</strong></td>
                     <td>Home · Projects · <strong>Methodology</strong> · Blog · Team</td>
                 </tr>
                 <tr>
-                    <td>Crear sección Metodología</td>
-                    <td>Entre Projects y Blog (con texto de RAMA + HTML app)</td>
+                    <td><strong>Crear sección Metodología</strong></td>
+                    <td>Entre Projects y Blog (con texto de RAMA + HTML app embebida)</td>
                 </tr>
                 <tr>
-                    <td>Integrar HTML aplicación</td>
+                    <td><strong>Integrar HTML aplicación</strong></td>
                     <td>https://rama-wheel-v30.tmrlab.chatgpt.site/</td>
                 </tr>
                 <tr>
-                    <td>Actualizar ficha de Rut Benavente</td>
+                    <td><strong>Actualizar ficha de Rut Benavente</strong></td>
                     <td>Añadir fechas (1979–2025)</td>
                 </tr>
                 <tr>
-                    <td>Añadir congresos faltantes</td>
+                    <td><strong>Añadir congresos faltantes</strong></td>
                     <td>En sección Congresos</td>
                 </tr>
                 <tr>
-                    <td>Publicar post #05</td>
-                    <td>"Píldoras especulativas" en Blog (añadir texto + fotografías)</td>
+                    <td><strong>Publicar post #05 en Blog</strong></td>
+                    <td>"Píldoras especulativas" (añadir texto + fotografías)</td>
                 </tr>
             </tbody>
         </table>
-    </section>
-    
-    <!-- Responsive -->
-    <section class="priority-high">
-        <h2>⚠️ 4. Responsive (Prioridad Alta)</h2>
+        
+        <!-- Responsive -->
+        <h3>4. Responsive (PRIORIDAD ALTA) <span class="priority-badge priority-high">ALTA</span></h3>
         <table>
             <thead>
                 <tr>
-                    <th>Cambio</th>
+                    <th width="35%">Cambio</th>
                     <th>Detalle</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Refuerzo comportamiento responsive</td>
-                    <td>Adaptar textos, imágenes, animaciones a PC/tablet/móvil sin desplazamientos</td>
+                    <td><strong>Refuerzo comportamiento responsive</strong></td>
+                    <td>Adaptar textos, imágenes, animaciones a PC/tablet/móvil sin desplazamientos ni saltos de línea</td>
                 </tr>
                 <tr>
-                    <td>Unificar escala tipográfica</td>
-                    <td>Simplificar de 15 tamaños a menos variaciones (hay incoherencias detectadas)</td>
+                    <td><strong>Unificar escala tipográfica</strong></td>
+                    <td>Simplificar de 15 tamaños a menos variaciones (hay incoherencias detectadas entre dispositivos)</td>
                 </tr>
                 <tr>
-                    <td>Corregir jerarquía de encabezados</td>
+                    <td><strong>Corregir jerarquía de encabezados</strong></td>
                     <td>Un solo H1 por página, H2 para secciones, H3 para tarjetas</td>
                 </tr>
-                <tr>
-                    <td>Tabla de tamaños actuales</td>
-                    <td><code>Escritorio → ≤991px → ≤767px → ≤479px</code> (ver detalles técnicos)</td>
-                </tr>
             </tbody>
         </table>
-    </section>
-    
-    <!-- SEO y Accesibilidad -->
-    <section class="priority-high">
-        <h2>⚠️ 5. SEO y Accesibilidad (Prioridad Alta)</h2>
+        
+        <!-- SEO y Accesibilidad -->
+        <h3>5. SEO y Accesibilidad (PRIORIDAD ALTA) <span class="priority-badge priority-high">ALTA</span></h3>
         <table>
             <thead>
                 <tr>
-                    <th>Cambio</th>
+                    <th width="35%">Cambio</th>
                     <th>Detalle</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Metadatos específicos por página</td>
-                    <td>Títulos, descripciones Open Graph únicos (actualmente duplicados)</td>
+                    <td><strong>Metadatos específicos por página</strong></td>
+                    <td>Títulos, descripciones Open Graph únicos (actualmente duplicados entre proyectos)</td>
                 </tr>
                 <tr>
-                    <td>Corrección SEO español/inglés</td>
-                    <td>Elimnar metadatos en inglés en versión española</td>
+                    <td><strong>Corrección SEO español/inglés</strong></td>
+                    <td>Eliminar metadatos en inglés en versión española</td>
                 </tr>
                 <tr>
-                    <td>Atributos ALT en imágenes</td>
+                    <td><strong>Atributos ALT en imágenes</strong></td>
                     <td>Descripciones para retratos, instrumentos, prototipos (muchos tienen alt="")</td>
                 </tr>
                 <tr>
-                    <td>Nombres accesibles en iconos</td>
+                    <td><strong>Nombres accesibles en iconos</strong></td>
                     <td>aria-label para redes sociales (Instagram, YouTube, LinkedIn, X)</td>
                 </tr>
                 <tr>
-                    <td>Estructura semántica</td>
-                    <td>Elementos <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code></td>
-                </tr>
-                <tr>
-                    <td>URL canónica</td>
-                    <td>Declarar canonical tags para evitar competencia con webflow.io</td>
+                    <td><strong>Estructura semántica</strong></td>
+                    <td>Elementos &lt;main&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;footer&gt;</td>
                 </tr>
             </tbody>
         </table>
-    </section>
-    
-    <!-- Comportamiento UX -->
-    <section class="priority-normal">
-        <h2>6. Comportamiento UX</h2>
+        
+        <!-- Comportamiento UX -->
+        <h3>6. Comportamiento UX</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Cambio</th>
+                    <th width="35%">Cambio</th>
                     <th>Detalle</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Unificar comportamiento de tarjetas</td>
-                    <td>Todas abren en misma pestaña (o indicar "Dormant/Coming soon")</td>
+                    <td><strong>Unificar comportamiento de tarjetas</strong></td>
+                    <td>Todas abren en misma pestaña; las incompletas marcar como "Dormant" o "Coming soon"</td>
                 </tr>
                 <tr>
-                    <td>Menú interior consistente</td>
+                    <td><strong>Menú interior consistente</strong></td>
                     <td>Mantener siempre Home/Projects/Blog/Team en todas las páginas</td>
                 </tr>
                 <tr>
-                    <td>Convertir "Click to Skip" en botón real</td>
-                    <td>Accesible con teclado + Enter/Esc + tabindex</td>
+                    <td><strong>"Click to Skip" accesible</strong></td>
+                    <td>Convertir en botón real accesible con teclado (Enter + Escape + espacio)</td>
                 </tr>
                 <tr>
-                    <td>Estados de foco visibles</td>
+                    <td><strong>Estados de foco visibles</strong></td>
                     <td>Definir :focus-visible para menús, botones, enlaces, iconos sociales</td>
                 </tr>
                 <tr>
-                    <td>Enlace logo pie de página</td>
+                    <td><strong>Enlace logo pie de página</strong></td>
                     <td>Dirigir a /en o /es (no a #)</td>
                 </tr>
             </tbody>
         </table>
-    </section>
-    
-    <!-- Optimización Técnica -->
-    <section class="priority-normal">
-        <h2>7. Optimización Técnica</h2>
+        
+        <!-- Optimización Técnica -->
+        <h3>7. Optimización Técnica</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Cambio</th>
+                    <th width="35%">Cambio</th>
                     <th>Detalle</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Reducir imágenes sobredimensionadas</td>
+                    <td><strong>Reducir imágenes sobredimensionadas</strong></td>
                     <td>Generar srcset responsive, convertir PNG a AVIF/WebP</td>
                 </tr>
                 <tr>
-                    <td>Carga diferida correcta</td>
-                    <td>No aplicar lazy loading a elementos visibles al inicio</td>
+                    <td><strong>Carga diferida correcta</strong></td>
+                    <td>No aplicar lazy loading a elementos visibles al inicio (logo de portada)</td>
                 </tr>
                 <tr>
-                    <td>Declarar dimensiones de imágenes</td>
+                    <td><strong>Declarar dimensiones de imágenes</strong></td>
                     <td>Añadir width/height para evitar desplazamientos durante carga</td>
                 </tr>
                 <tr>
-                    <td>Cursor responsivo</td>
-                    <td>Adaptar a <code>@media prefers-reduced-motion</code> y <code>pointer: fine</code></td>
+                    <td><strong>Cursor responsivo</strong></td>
+                    <td>Adaptar a @media prefers-reduced-motion y pointer: fine</td>
                 </tr>
                 <tr>
-                    <td>Fuentes en WOFF2</td>
+                    <td><strong>Fuentes en WOFF2</strong></td>
                     <td>En lugar de TTF</td>
                 </tr>
                 <tr>
-                    <td>Corregir identificadores SVG duplicados</td>
-                    <td>SvgRepo_bgCarrier en portada y blog</td>
+                    <td><strong>IDs SVG duplicados</strong></td>
+                    <td>Corregir SVGRepo_bgCarrier en portada y blog</td>
                 </tr>
                 <tr>
-                    <td>Enlaces en nueva pestaña</td>
-                    <td>Incluir <code>rel="noopener noreferrer"</code></td>
-                </tr>
-                <tr>
-                    <td>Datos estructurados</td>
-                    <td>Add schema.org para organización y artículos</td>
+                    <td><strong>Rel noopener noreferrer</strong></td>
+                    <td>En enlaces que abren pestaña nueva</td>
                 </tr>
             </tbody>
         </table>
-    </section>
+    </div>
+    
+    <!-- PAGE BREAK PARA IMPRESIÓN -->
+    <div class="page-break"></div>
+    
+    <!-- ============================================ -->
+    <!-- SECCIÓN 2: AUDITORÍA TÉCNICA -->
+    <!-- ============================================ -->
+    
+    <div class="section-auditoria">
+        <h2>🔧 Parte 2: Auditoría Técnica Detallada</h2>
+        <p style="margin-bottom: 25px; color: #666;">Lista completa de 32 correcciones técnicas identificadas en el sitio</p>
+        
+        <div class="finding-box">
+            <strong>Resumen:</strong> 32 tareas técnicas detectadas en 9 categorías. Prioridad alta: SEO, jerarquía H1/H2/H3, atributos ALT, estructura semántica.
+        </div>
+        
+        <!-- Tipografía y escala -->
+        <h3>🔤 1. Tipografía y Escala (6 tareas)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">#</th>
+                    <th>Tarea</th>
+                    <th>Detalle Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="task-number">1</span></td>
+                    <td>Simplificar escala tipográfica</td>
+                    <td>Hoy hay 15 tamaños distintos con valores muy pegados (18, 19, 20, 21, 22, 24 px). Reducir variaciones.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">2</span></td>
+                    <td>Corregir incoherencia títulos tarjetas</td>
+                    <td>Pasa de 30 → 23 → <strong>24 px</strong> en móvil. Lo lógico sería mantener 23 o reducir todo.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">3</span></td>
+                    <td>Títulos de blog: H1 → H3</td>
+                    <td>Ahora están como H1 de 28 px. Semánticamente deberían ser H3 manteniendo tamaño visual.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">4</span></td>
+                    <td>Verificar pesos sintetizados</td>
+                    <td>Helvetica Neue se usa en 500/600 pero solo carga archivo 700. Poppins 200 igual (solo 300-700).</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">5</span></td>
+                    <td>Servir fuentes en WOFF2</td>
+                    <td>En lugar de TTF para mejor rendimiento.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">6</span></td>
+                    <td>Variante para títulos largos</td>
+                    <td>Echion está a 70 px (3 líneas, 252 px alto). Crear variante de 52-60 px en escritorio.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- SEO -->
+        <h3>🔍 2. SEO (PRIORIDAD ALTA) (4 tareas) <span class="priority-badge priority-high">ALTA</span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">#</th>
+                    <th>Tarea</th>
+                    <th>Detalle Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="task-number">7</span></td>
+                    <td>Metadatos únicos por página/CMS</td>
+                    <td><strong>Problemas:</strong> Ingravitas usa título de Hypate · Ingravitas/Echion usan descripción de Hypate · Blog no tiene meta OG · Proyectos solo "Projects" · Ninguna tiene imagen social. <br/><strong>Acción:</strong> Configurar en Webflow títulos, descripciones e imágenes sociales propios para cada página.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">8</span></td>
+                    <td>Declarar URL canónica</td>
+                    <td>No existe actualmente. Añadir canonical tags.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">9</span></td>
+                    <td>Bloquear subdominio webflow.io</td>
+                    <td>Evitar que compita en Google con el dominio definitivo.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">10</span></td>
+                    <td>Normalizar título "Blogs"</td>
+                    <td>Cambiar a "TMRL ➜ Blog"</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Jerarquía Encabezados -->
+        <h3>🏷️ 3. Jerarquía de Encabezados (5 tareas)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">#</th>
+                    <th>Tarea</th>
+                    <th>Detalle Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="task-number">11</span></td>
+                    <td>Portada: 4 H1 → 1 H1</td>
+                    <td>Ahora: "Welcome" + 3 títulos del blog. Dejar solo uno.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">12</span></td>
+                    <td>Página blog: reestructurar</td>
+                    <td>4 H1 pero "Blog" está como H2. Corregir jerarquía.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">13</span></td>
+                    <td>Página proyectos: añadir H1</td>
+                    <td>No tiene ningún H1 actualmente.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">14</span></td>
+                    <td>Hypate: corregir saltos</td>
+                    <td>Salta de H2 directamente a H4 en algunos apartados.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">15</span></td>
+                    <td>Regla general</td>
+                    <td>1 H1 por página · H2 secciones · H3 tarjetas</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Accesibilidad -->
+        <h3>♿ 4. Accesibilidad (PRIORIDAD ALTA) (5 tareas) <span class="priority-badge priority-high">ALTA</span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">#</th>
+                    <th>Tarea</th>
+                    <th>Detalle Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="task-number">16</span></td>
+                    <td>Rellenar alt de imágenes</td>
+                    <td><strong>Faltan:</strong> Portada 15/17 · Hypate 47/48 · Ingravitas 12/12 · Echion 22/22 · Blog 7/7 · Artículo 11/11.<br/>Decorativas pueden mantener alt vacío.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">17</span></td>
+                    <td>aria-label en logos/iconos</td>
+                    <td>Logotipo enlazado + Instagram, YouTube, LinkedIn, X (ej. aria-label="Instagram de TMRLab").</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">18</span></td>
+                    <td>Estructura semántica</td>
+                    <td>Añadir &lt;header&gt;, &lt;nav aria-label&gt;, &lt;main&gt;, &lt;footer&gt;. Ninguna página tiene &lt;main&gt;.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">19</span></td>
+                    <td>Convertir "Click to Skip" en button</td>
+                    <td>Añadir rol de botón, tabindex, aria-label, acceso por Enter/Espacio/Escape.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">20</span></td>
+                    <td>Estados de foco visibles</td>
+                    <td>Definir :focus-visible para menú, selector idioma, tarjetas, botones, iconos sociales.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Navegación y Experiencia -->
+        <h3>🧭 5. Navegación y Experiencia (3 tareas)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">#</th>
+                    <th>Tarea</th>
+                    <th>Detalle Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="task-number">21</span></td>
+                    <td>Unificar comportamiento tarjetas</td>
+                    <td>Hoy: Hypate/Ingravitas abren pestaña nueva · Echion misma pestaña · Aurikus enlaza a # · Symbiotika/SymphonAI no son enlaces. <br/><strong>Acción:</strong> Todas en misma pestaña. Las sin página → no enlace ("Dormant"/"Coming soon").</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">22</span></td>
+                    <td>Menú interior consistente</td>
+                    <td>Mantener siempre: Home · Projects · Blog · Team con mismos destinos.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">23</span></td>
+                    <td>Logo pie de página</td>
+                    <td>Ahora enlaza a #. Debe dirigir a /en o /es.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Localización Español -->
+        <h3>🇪🇸 6. Versión Español - Localización (1 tarea)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">#</th>
+                    <th>Tarea</th>
+                    <th>Detalle Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="task-number">24</span></td>
+                    <td>Traducir textos en inglés</td>
+                    <td>Permanent Crew · Visual and Digital Development Team · Read more · See all · Active/Dormant · Hello! · Texto intro equipo · Títulos/descripciones SEO.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Imágenes y Rendimiento -->
+        <h3>🖼️ 7. Imágenes y Rendimiento (3 tareas)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">#</th>
+                    <th>Tarea</th>
+                    <th>Detalle Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="task-number">25</span></td>
+                    <td>Reducir imágenes sobredimensionadas</td>
+                    <td><strong>Ejemplos:</strong> 1986 px mostrado a 484 px · Blog 3264×2448 a ~491×368 · Galerías 1363-1986 para thumbnails de 484 px.<br/><strong>Acción:</strong> Generar srcset, servir ~2× tamaño mostrado, convertir PNG fotográficos a AVIF/WebP.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">26</span></td>
+                    <td>Quitar lazy loading en elementos iniciales</td>
+                    <td>Logo visible al cargar tiene loading="lazy". Debe ser normal o priority high.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">27</span></td>
+                    <td>Declarar dimensiones</td>
+                    <td>Añadir width/height o aspect-ratio para evitar saltos de layout durante carga.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Animación y Cursor -->
+        <h3>🖱️ 8. Animación y Cursor (2 tareas)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">#</th>
+                    <th>Tarea</th>
+                    <th>Detalle Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="task-number">28</span></td>
+                    <td>Cursor responsivo</td>
+                    <td>Aplicar cursor personalizado solo con @media (pointer: fine) + mantener cursor nativo como fallback.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">29</span></td>
+                    <td>Reducir motion</td>
+                    <td>Añadir @media (prefers-reduced-motion: reduce) para desactivar intro, partículas y animaciones innecesarias.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Detalles Técnicos Menores -->
+        <h3>🔧 9. Detalles Técnicos Menores (4 tareas)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">#</th>
+                    <th>Tarea</th>
+                    <th>Detalle Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="task-number">30</span></td>
+                    <td>ID SVG duplicados</td>
+                    <td>SVGRepo_bgCarrier en portada y blog. Unificar IDs.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">31</span></td>
+                    <td>Rel noopener noreferrer</td>
+                    <td>Añadir en enlaces que abren pestaña nueva.</td>
+                </tr>
+                <tr>
+                    <td><span class="task-number">32</span></td>
+                    <td>Datos estructurados</td>
+                    <td>Añadir schema.org para organización y artículos (mejora interpretación por buscadores).</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Aspectos Positivos -->
+        <div class="positive-box">
+            <strong>✅ Aspectos Positivos (Sin Acción):</strong><br/>
+            Idiomas correctamente identificados · hreflang configurado · Galerías mayormente en AVIF · Carga diferida presente · Sin problemas evidentes de contraste en textos sobre fondos sólidos.
+        </div>
+        
+        <!-- Orden de Actuación -->
+        <div class="order-box">
+            <strong>📅 Orden de Actuación Recomendado:</strong>
+            <ol>
+                <li>Metadatos y traducciones</li>
+                <li>H1/H2/H3 y elemento &lt;main&gt;</li>
+                <li>Textos alternativos y navegación por teclado</li>
+                <li>Enlaces y comportamiento de las tarjetas</li>
+                <li>Optimización de imágenes</li>
+                <li>Cursor, animaciones y fuentes</li>
+                <li>Pulido visual y datos estructurados</li>
+            </ol>
+        </div>
+    </div>
     
     <div class="footer-info">
-        <p><strong>Contacto cliente:</strong> hello@tmrl.org | www.tmrl.org</p>
         <p><strong>Laboratorio de Investigación Musical Traginer</strong></p>
-        <p style="margin-top: 15px; color: #999;">Documento generado automáticamente para seguimiento de cambios solicitados</p>
+        <p>Zaragoza, España | hello@tmrl.org | www.tmrl.org</p>
+        <p style="margin-top: 15px; color: #999;">Documento generado el 18 de octubre de 2026 para seguimiento de cambios solicitados</p>
     </div>
 
 </body>
